@@ -1,0 +1,16 @@
+{
+    "repos": {
+        "stable": {
+            "author":"Knijn",
+            "displayname":"Stable branch",
+            "type":"stable",
+            "url":"example.org"            
+        },
+        "edge": {
+            "author":"Knijn",
+            "displayname":"Development branch",
+            "type":"dev",
+            "url":"example.org"    
+        }
+    }
+}
