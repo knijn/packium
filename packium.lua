@@ -21,6 +21,20 @@ end
 local packium = {}
 local args = {...}
 
+function dump(o)
+    if type(o) == 'table' then
+       local s = '{ '
+       for k,v in pairs(o) do
+          if type(k) ~= 'number' then k = '"'..k..'"' end
+          s = s .. '['..k..'] = ' .. dump(v) .. ','
+       end
+       return s .. '} '
+    else
+       return tostring(o)
+    end
+ end
+ 
+
 
 packium.help = function (arguments)
     print([[
@@ -41,14 +55,46 @@ packium.install = function (arguments)
     error("Please specify a package to be installed.")
   end
   
-  for o,i in pairs(repo.packages) do
-      if tostring(o) == package then
-          print("Installing musicify...")
-          shell.run("o.install")
-      else
-        error("Package " .. tostring(package) ..  " not found...")
-      end
+  print("Locating " .. package .. "...")
+  if not repo.packages[package] then -- Thanks 6_4 for helping with this!!
+    error("Package " .. tostring(package) ..  " not found...")
   end
+  local i = repo.packages[package]
+  print("Installing " .. package .. "...")
+
+  for o,i in pairs(i.depends) do
+      shell.run()
+  end
+
+  shell.run("wget run " .. i.installurl) -- Thanks 6_4 for helping with this!!
+end
+
+
+packium.info = function (arguments)
+  local package = arguments[1]
+    if not package or not tostring(package) then
+    error("Please specify a package to get info.")
+    end
+  
+  print("Locating " .. package .. "...")
+  if not i == repo.packages[package] then -- Thanks 6_4 for helping with this!!
+    error("Package " .. tostring(package) ..  " not found...")
+  end
+  local i = repo.packages[package]
+
+        print(package .. " info:")
+        print(tostring(dump(i)))
+        
+        --print("Name: " .. i.name)
+        --print("Author: " .. i.author)
+        --print("Branch: " .. directpackage.branch)
+        print("Version: " .. i.ver)
+        if #directpackage.depends > 0 then
+          print("Dependencies:")
+          for _, dep in pairs(directpackage.depends) do
+            print(" " .. dep.package .. " - minimum version: " .. dep.version)
+          end
+        end
 end
 
 command = table.remove(args, 1)

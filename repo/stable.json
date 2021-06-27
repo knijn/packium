@@ -4,9 +4,22 @@
     "type": "stable",
     "packages":  {
         "musicify": {
-            "ver":0.5,
-            "installcommand":"wget run https://raw.githubusercontent.com/knijn/musicify/main/install.lua",
-            "installurl":"https://raw.githubusercontent.com/knijn/musicify/main/install.lua"
+            "name": "Musicify",
+            "author": "RubenKnijn",
+            "branch": "main",
+            "ver": "0.5",
+            "depends": [
+                {"package": "mbs", "version": "0.1", "optional": true} 
+            ],
+            "installurl": "https://raw.githubusercontent.com/knijn/musicify/main/install.lua"
+        },
+        "mbs": {
+            "name": "Mildly Better Shell",
+            "author": "SquidDev",
+            "branch": "master",
+            "ver": "0",
+            "depends": [],
+            "installurl": "https://raw.githubusercontent.com/knijn/packium/main/repo/installscripts/mbsinstall.lua"
         }
     }
 }
