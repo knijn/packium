@@ -1,1 +1,1 @@
-java -jar ./ccemux-launcher.jar --start-dir=C:\Users\Knijn\Documents\GitHub\pacium
+java -jar ./ccemux-launcher.jar --start-dir=C:\Users\Knijn\Documents\GitHub\packium

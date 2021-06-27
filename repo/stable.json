@@ -1,10 +1,10 @@
 {
-    "author":"Knijn",
-    "displayname":"Stable branch",
-    "type":"stable",
-    "packages": {
-        "name":"musicify",
-        "install":"wget run https://raw.githubusercontent.com/knijn/musicify/main/install.lua",
-        "version":0.4
+    "author": "Knijn",
+    "displayname": "Stable branch",
+    "type": "stable",
+    "packages":  {
+        "name": "musicify",
+        "install": "wget run https: //raw.githubusercontent.com/knijn/musicify/main/install.lua",
+        "version": 0.4
     }
 }
