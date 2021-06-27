@@ -35,12 +35,24 @@ packium
 ]])
 end
 
---packium.install = function (arguments)
+packium.install = function (arguments)
+  local package = arguments[1]
+    if not package or not tostring(package) then
+    error("Please specify a package to be installed.")
+  end
+  
+  for o,i in pairs(repo.packages) do
+      if tostring(o.name) == package then
+          print("SUCCESS!!")
+      else
+        error("Package " .. tostring(package) ..  " not found...")
+      end
+  end
+end
 
 command = table.remove(args, 1)
 
 if packium[command] then
-    print("found command")
     packium[command](args)
 else
     print("Please provide a valid command. For usage, use `packium help`.")
