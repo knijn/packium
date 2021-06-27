@@ -42,8 +42,9 @@ packium.install = function (arguments)
   end
   
   for o,i in pairs(repo.packages) do
-      if tostring(o.name) == package then
-          print("SUCCESS!!")
+      if tostring(o) == package then
+          print("Installing musicify...")
+          shell.run("o.install")
       else
         error("Package " .. tostring(package) ..  " not found...")
       end

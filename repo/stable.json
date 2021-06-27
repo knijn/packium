@@ -5,7 +5,8 @@
     "packages":  {
         "musicify": {
             "ver":0.5,
-            "install":"wget run https://raw.githubusercontent.com/knijn/musicify/main/install.lua"
+            "installcommand":"wget run https://raw.githubusercontent.com/knijn/musicify/main/install.lua",
+            "installurl":"https://raw.githubusercontent.com/knijn/musicify/main/install.lua"
         }
     }
 }
