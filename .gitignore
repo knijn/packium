@@ -1,2 +1,6 @@
 cloud.lua
 *.jar
+.mbs
+mbs.lua
+startup/
+.shell_history

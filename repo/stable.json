@@ -19,7 +19,8 @@
             "branch": "master",
             "ver": "0",
             "depends": [],
-            "installurl": "https://raw.githubusercontent.com/knijn/packium/main/repo/installscripts/mbsinstall.lua"
+            "installurl": "https://raw.githubusercontent.com/knijn/packium/main/repo/installscripts/mbsinstall.lua",
+            "removeurl": "https://raw.githubusercontent.com/knijn/packium/main/repo/installscripts/mbsremove.lua"
         }
     }
 }
