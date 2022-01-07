@@ -8,9 +8,7 @@
             "author": "RubenKnijn",
             "branch": "main",
             "ver": "0.5",
-            "depends": [
-                {"package": "mbs", "version": "0.1", "optional": true} 
-            ],
+            "depends": [],
             "installurl": "https://raw.githubusercontent.com/knijn/musicify/main/install.lua"
         },
         "mbs": {

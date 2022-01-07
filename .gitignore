@@ -1,6 +1,9 @@
 cloud.lua
 *.jar
+.mbs.lua
 .mbs
 mbs.lua
 startup/
 .shell_history
+musicify.lua
+musicify_config.lua
